@@ -70,7 +70,7 @@ class Local extends Driver
     {
         RedirectionForm::setViewPath(dirname(__DIR__).'/../../resources/views/local-form.php');
 
-        return new RedirectionForm('', $this->getFormData(), 'POST');
+        return new RedirectionForm('/bank', $this->getFormData(), 'POST');
     }
 
     /**

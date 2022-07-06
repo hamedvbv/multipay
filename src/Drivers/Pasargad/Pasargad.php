@@ -104,9 +104,9 @@ class Pasargad extends Driver
                 'TransactionReferenceID' => Request::input('tref')
             ]
         );
-        if ($this->invoice->getAmount() != $invoiceDetails['Amount']) {
-            throw new InvalidPaymentException('Invalid amount');
-        }
+        // if ($this->invoice->getAmount() != $invoiceDetails['Amount']) {
+        //     throw new InvalidPaymentException('Invalid amount');
+        // }
         $iranTime = new DateTime('now', new DateTimeZone('Asia/Tehran'));
         $fields = [
             'MerchantCode' => $invoiceDetails['MerchantCode'],
